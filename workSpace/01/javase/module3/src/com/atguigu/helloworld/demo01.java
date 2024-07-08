@@ -16,6 +16,8 @@ public class demo01
         person.Age = 30;
         person.Name = "John Doe";
 
+
+
         demo01 demo01=new demo01();
         Person2 p2=  demo01.new Person2();
         p2.Age=88;
