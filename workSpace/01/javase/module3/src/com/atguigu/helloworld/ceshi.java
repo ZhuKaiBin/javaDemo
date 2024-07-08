@@ -5,7 +5,7 @@ public class ceshi {
         double a=2.5;
         System.out.println("新增");
 
-
+        var j=100;
 
 
 
