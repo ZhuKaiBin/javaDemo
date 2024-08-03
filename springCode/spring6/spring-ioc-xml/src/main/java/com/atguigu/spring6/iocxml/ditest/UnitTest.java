@@ -36,4 +36,25 @@ public class UnitTest {
 //        var book = context.getBean(Book.class);
         System.out.println(emp.toString());
     }
+
+    @Test
+    public  void Test4()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean-diarray.xml");
+        var emp = context.getBean("emp", Emp.class);
+        emp.work();
+
+        System.out.println(emp.toString());
+    }
+
+    @Test
+    public  void Test5()
+    {
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean-diList.xml");
+        var dept = context.getBean("Dept", Dept.class);
+        dept.info();
+
+        System.out.println(dept.toString());
+    }
+
 }
