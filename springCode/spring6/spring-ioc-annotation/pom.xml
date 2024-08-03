@@ -10,7 +10,7 @@
     </parent>
 
 
-    <artifactId>spring-first</artifactId>
+    <artifactId>spring-ioc-annotation</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

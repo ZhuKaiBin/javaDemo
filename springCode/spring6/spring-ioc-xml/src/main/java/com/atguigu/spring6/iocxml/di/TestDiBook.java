@@ -1,4 +1,4 @@
-package com.atguigu.spring6.iocxml.DemoTest;
+package com.atguigu.spring6.iocxml.di;
 
 import com.atguigu.spring6.iocxml.di.Book;
 import org.junit.jupiter.api.Test;

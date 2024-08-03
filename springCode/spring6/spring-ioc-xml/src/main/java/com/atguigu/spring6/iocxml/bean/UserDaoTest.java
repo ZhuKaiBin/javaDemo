@@ -1,4 +1,4 @@
-package com.atguigu.spring6.iocxml.DemoTest;
+package com.atguigu.spring6.iocxml.bean;
 
 import com.atguigu.spring6.iocxml.bean.UserDao;
 import org.springframework.context.ApplicationContext;
@@ -9,8 +9,8 @@ public class UserDaoTest {
         ApplicationContext context=new ClassPathXmlApplicationContext("bean.xml");
 
         //1.
-//        var userDao=context.getBean(UserDao.class);
-//        userDao.run();
+        //var userDao=context.getBean(UserDao.class);
+        //userDao.run();
 
 
         var person =(UserDao)context.getBean("PersonDapImpl") ;

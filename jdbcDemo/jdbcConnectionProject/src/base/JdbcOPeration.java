@@ -1,14 +1,12 @@
 package base;
 
 import org.junit.Test;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class JdbcOPeration {
-
     @Test
     //单行单列
     public void testQuerySingleRowCol() throws SQLException {
