@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="teacher1" class="com.atguigu.spring6.iocxml.dimap.Teacher">
+        <property name="teacherId" value="0x00a"></property>
+        <property name="teacherName" value="曹操老师"></property>
+    </bean>
+    <bean id="teacher2" class="com.atguigu.spring6.iocxml.dimap.Teacher">
+        <property name="teacherId" value="0x00b"></property>
+        <property name="teacherName" value="刘备老师"></property>
+    </bean>
+
+    <bean id="student" class="com.atguigu.spring6.iocxml.dimap.Student">
+        <property name="sid" value="001"></property>
+        <property name="sname" value="小刚"></property>
+
+        <!--        studengt中还有一个teacherMap的对象,接下来注入
+                相当于
+                小刚这个学生有两个老师，刘备和曹操
+        -->
+        <property name="teachMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>10010</value>
+                    </key>
+                    <ref bean="teacher1"></ref>
+                </entry>
+                <entry>
+                    <key>
+                        <value>10086</value>
+                    </key>
+                    <ref bean="teacher2"></ref>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

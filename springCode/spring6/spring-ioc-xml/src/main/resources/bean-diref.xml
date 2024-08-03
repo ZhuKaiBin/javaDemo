@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+ ">
+
+
+    <bean id="Student" class="com.atguigu.spring6.iocxml.dimap.Student">
+        <property name="sname" value="小米"></property>
+        <property name="sid" value="100001"></property>
+
+        <property name="lessonList" ref="lessionListUtil"></property>
+        <property name="teachMap" ref="teachMapUtil"></property>
+    </bean>
+
+
+
+    <util:list id="lessionListUtil">
+        <ref bean="lessonOne"></ref>
+        <ref bean="lessonTwo"></ref>
+
+    </util:list>
+
+
+    <util:map id="teachMapUtil">
+        <entry>
+            <key>
+                <value>1001</value>
+            </key>
+            <ref bean="teacherOne"></ref>
+        </entry>
+        <entry>
+            <key>
+                <value>1002</value>
+            </key>
+            <ref bean="teacherTwo"></ref>
+        </entry>
+    </util:map>
+
+
+    <bean id="lessonOne" class="com.atguigu.spring6.iocxml.dimap.Lesson">
+        <property name="lName" value="C#程序设计"></property>
+    </bean>
+    <bean id="lessonTwo" class="com.atguigu.spring6.iocxml.dimap.Lesson">
+        <property name="lName" value="C#课后联系"></property>
+    </bean>
+
+
+    <bean id="teacherOne" class="com.atguigu.spring6.iocxml.dimap.Teacher">
+        <property name="teacherName" value="雷军"></property>
+        <property name="teacherId" value="001"></property>
+    </bean>
+    <bean id="teacherTwo" class="com.atguigu.spring6.iocxml.dimap.Teacher">
+        <property name="teacherName" value="卢伟冰"></property>
+        <property name="teacherId" value="002"></property>
+    </bean>
+
+</beans>
