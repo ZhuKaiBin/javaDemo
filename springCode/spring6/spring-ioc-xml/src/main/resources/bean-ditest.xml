@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <!--  1. 外部bean-->
+<!--    <bean id="Dept" class="com.atguigu.spring6.iocxml.ditest.Dept">-->
+<!--        <property name="dname" value="小米法务部"></property>-->
+<!--    </bean>-->
+    <!--    <bean id="Emp" class="com.atguigu.spring6.iocxml.ditest.Emp">-->
+    <!--        <property name="age" value="18"></property>-->
+    <!--        <property name="ename" value="奥特曼"></property>-->
+
+    <!--&lt;!&ndash;        接下来注入对象 外部bean引用&ndash;&gt;-->
+    <!--        <property name="dept" ref="Dept"></property>-->
+    <!--    </bean>-->
+
+
+<!--   2. 内部bean-->
+<!--    <bean id="Emp2" class="com.atguigu.spring6.iocxml.ditest.Emp">-->
+<!--        <property name="age" value="18"></property>-->
+<!--        <property name="ename" value="奥特曼"></property>-->
+<!--        <property name="dept">-->
+<!--            <bean id="Dept2" class="com.atguigu.spring6.iocxml.ditest.Dept">-->
+<!--                <property name="dname" value="小米财务部"></property>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--   3. 级联赋值-->
+        <bean id="Dept3" class="com.atguigu.spring6.iocxml.ditest.Dept">
+            <property name="dname" value="小米策划部"></property>
+        </bean>
+        <bean id="Emp3" class="com.atguigu.spring6.iocxml.ditest.Emp">
+            <property name="age" value="18"></property>
+            <property name="ename" value="奥特曼"></property>
+            <property name="dept" ref="Dept3"></property>
+            <property name="dept.dname" value="市场部"></property>
+        </bean>
+
+
+</beans>
